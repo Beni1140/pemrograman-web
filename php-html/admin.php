@@ -1,7 +1,6 @@
 <?php
 session_start();
 if ($_SESSION['role'] != 'admin') {
-    session_destroy();
     header('Location: index.php');
     exit();
 }
@@ -20,11 +19,13 @@ if ($_SESSION['role'] != 'admin') {
 
 <body>
     <div class="container mt-5">
-        <div class="alert alert-success text-center" role="alert">
-            <h1>Selamat Datang, <?php echo htmlspecialchars($_SESSION['name']); ?></h1>
-            <p>Anda sedang berada di halaman admin.</p>
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Selamat datang, Administrator <?php echo htmlspecialchars($_SESSION['name']); ?>
+                </h1>
+                <a href="./backend/logout.php" class="btn btn-danger mt-3">Logout</a>
+            </div>
         </div>
-        <a href="logout.php" class="btn btn-danger mt-3">Logout</a>
     </div>
 
     <!-- Bootstrap JS and dependencies -->

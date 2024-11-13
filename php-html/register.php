@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Register</h1>
-    <form action="./backend/register.php" method="post">
-        <input type="text" name="name" placeholder="masukkan nama anda">
-        <input type="email" name="email" placeholder="masukkan email anda">
-        <input type="password" name="password" placeholder="masukkan password anda">
-        <input type="password" name="confirm" placeholder="masukkan konfirmasi password anda">
-        <input type="submit" value="login" name="submit">
-    </form>
 
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center mb-4">Register</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <form action="./backend/register.php" method="post">
+                            <div class="form-group">
+                                <label for="name">Nama</label>
+                                <input type="text" class="form-control" name="name" id="name"
+                                    placeholder="Masukkan nama anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Masukkan email anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" id="password"
+                                    placeholder="Masukkan password anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm">Konfirmasi Password</label>
+                                <input type="password" class="form-control" name="confirm" id="confirm"
+                                    placeholder="Masukkan konfirmasi password anda" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" name="submit">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
